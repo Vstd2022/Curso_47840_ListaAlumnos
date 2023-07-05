@@ -1,0 +1,34 @@
+
+<table >
+  <tr>
+    <th [ngStyle]="{ 'font-size': myFontSize}">
+      Lista de Alumnos
+    </th>      
+  </tr>
+ <br> 
+ <div > 
+   
+    <thead>
+      <tr>
+        <td>Nombre</td>
+        <td>Nota</td>
+      </tr>
+    </thead>
+  
+    <tr *ngFor="let nomstudents of liststudents">        
+      <div [ngClass]="nomstudents.nota > 50 ? 'aprueba':'noaprueba'"> 
+        <td>{{nomstudents.nombre}}</td>
+        <td>{{nomstudents.nota}}  </td>
+     </div> 
+    </tr>
+
+</div> 
+</table>
+
+<br>
+<br>
+<div >
+  <P>Alumnos aprobados en Verde</P>      
+  <p>Con Fecha {{ diahoy | date:"dd/MM/yyyy" }}</p>
+    
+</div>
